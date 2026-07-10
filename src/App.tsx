@@ -10,7 +10,7 @@ import { LoginPage } from './pages/auth/LoginPage';
 import { RegisterPage } from './pages/auth/RegisterPage';
 
 // Dashboard Pages
-import { EntrepreneurDashboard } from './pages/dashboard/EntrepreneurDashboard';
+import EntrepreneurDashboard  from './pages/dashboard/EntrepreneurDashboard';
 import { InvestorDashboard } from './pages/dashboard/InvestorDashboard';
 
 // Profile Pages
@@ -26,6 +26,8 @@ import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
+import VideoCsll from './components/VideoCsll';
+import DocumentChamber from './components/DocumentChamber'; // Added import
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -70,6 +72,16 @@ function App() {
           
           <Route path="/documents" element={<DashboardLayout />}>
             <Route index element={<DocumentsPage />} />
+          </Route>
+          
+          {/* Document Chamber Route Added */}
+          <Route path="/document-chamber" element={<DashboardLayout />}>
+            <Route index element={<DocumentChamber />} />
+          </Route>
+          
+          {/* Video Call Route */}
+          <Route path="/video-call" element={<DashboardLayout />}>
+            <Route index element={<VideoCsll />} />
           </Route>
           
           <Route path="/settings" element={<DashboardLayout />}>
